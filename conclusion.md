@@ -1,5 +1,5 @@
 
-# Conclusion
+# Conclusion {label="&#53;."}
 
 In this research, I have explored how three possible land use scenarios could affect the carbon balance of the agricultural Midwest. In each chapter I focused on a different aspect of belowground C flow, but I have tried to show how each study contributes toward reducing uncertainty about the C-cycling consequences of management decisions.
 

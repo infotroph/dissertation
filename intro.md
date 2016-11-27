@@ -1,5 +1,5 @@
 
-# Introduction {label="1."}
+# Introduction {label="&#49;."}
 
 
 Earth's climate is changing because of increases in atmospheric CO~2~ caused by human fossil fuel use. In the Midwestern United States, temperatures are forecast to increase 2-4 °C from 20th-century averages and [CO~2~] to exceed 500 ppm by the mid-21st century [@RomeroLankao:2014vb; @NCA2014]. These changes will have profound effects on the ecology and biogeochemistry of all ecosystems, and therefore on the policies and land use decisions needed to manage them effectively. Land use decisions in turn change ecosystem C storage and will therefore feed back to global climate in ways either stabilizing if a new land use stores more C or destabilizing if a new land use releases C [@AndersonTeixeira:2011hp]. Therefore, quantifying the C storage potential of potential land-use scenarios is fundamental to predicting climate responses and an essential step toward choosing policies that promote climate-positive outcomes.
