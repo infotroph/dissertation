@@ -22,12 +22,15 @@ PANDOCBASE = pandoc -s -S \
 	--reference-docx diss_style.docx \
 	$(CROSSREFMETA)
 
-all: abstract.docx intro.docx conclusion.docx
+all: abstract.docx acknowledgements.docx intro.docx conclusion.docx
 
 .phony: all
 
 abstract.docx: abstract.md $(COMMONDEPS)
 	$(PANDOCBASE) abstract.md -o $@
+
+acknowledgements.docx: acknowledgements.md $(COMMONDEPS)
+	$(PANDOCBASE) acknowledgements.md -o $@
 
 intro.docx: intro.md $(COMMONDEPS)
 	$(PANDOCBASE) intro.md -o $@
