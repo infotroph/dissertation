@@ -1,0 +1,104 @@
+Notes from compiling pre-defense version:
+
+tface paper:
+* Copied from Word version, pasted
+* Turned off line numbers
+* header styles seem to have updated automatically
+* Refs to supp figs/tables were broken "((???))" in version I copied from -- oh yeah, I originally compiled this with a hacked pandoc-crossref. Fixed by hand in diss file, did not fix in tface paper file.
+* Table 1 footnote to compact, add newline
+* All figure styles to compact, adjust size to fit on page w/caption
+* Add table/figure numbers to supplements
+* Remove broken crossref tags from supp tables, adjust column widths, set footnotes to compact
+
+
+efrhizo paper
+* copied from Word, pasted
+* turned off line numbers
+* deleted keywords
+* Adusted figures sizes
+
+prairie paper
+*opened, transferred EHD edits to Markdown accepting as I went
+* copied into diss document
+* turned off line nums
+* that's pretty much it! hand-fixed a typo or two here and in Makrdown, but figs all ~ok
+
+todo:
+	update NASS citation? looks weird to say "in 2016, 71.3 million acres... (NASS 2011)."
+
+
+For version submitted morning of 20161129:
+
+Compiled each chapter in its original manuscript directory, in a newly created branch named 'as-diss-chap' (ch. 2) or 'as-diss-chapter' (chapters 3,4). For all chapters, edited Makefile to point to versions of style/filter files in     /UI/dissertation and tweaked various formats/text to match dissertation style as closely as possible. See each chapter's repo for details... Basically I copied in a lot of "fully formatted" text and then tweaked format, and in many cases content too, a lot in Word. No, sorry, I don't have a better record than that.
+
+Title page: Assembled by hand in Word.
+
+Abstract, Acknowledgements, Ch5/Conclusions: Compiled by `$(make -f endmatter.make)`, copied & pasted from each compiled docx into ckb_dissertation.docx, no further changes.
+
+Table of Contents: Assembled by hand in Word, must update page numbers every edit.
+
+* Ch1/intro: 
+    - Compiled by endmatter.make
+    - copied & pasted
+    - Added newlines before each section header, except when header is already at the top of a page
+    - Added section break between end of refs and beginning of Ch. 2
+  	- Reset page numbers: open header & footer ribbon tab, uncheck "link to previous", open Insert > Page Numbers > Format > "restart at" > 1.
+
+* Ch2/TFACE: 
+	- Opened version compiled and hand-edited as `drafts_to_evan/ckb-tface-20161127_dissformatted.docx` in 'as-diss-chap' branch of TFACE repo, selected all.
+	- Pasted
+	- Removed linebreaks above section headers when they were already at top of page
+	- Hand-corrected citations Not a complete check, just the ones I noticed. NOT corrected in any upstream source:
+		David et al 2009: journal name "Environment"->"Environmental"
+		Jelinski and Kucharik 2009 journal name "Of"->"of"
+		Eswaran et al 1993 journal name "Of"->"of"
+		Healy et al 1996 journal name "Of"->"of"
+		Marriott and Wander 2006  journal name "Of"->"of"
+		Pendall et al 2013 journal name "Plos One" -> "PLoS ONE"
+	- updated TOC entry: Ch2 now begins on P. 12.
+
+* Ch3/rhizotron:
+	- Updated TOC entry: Now begins on P. 62.
+	- Text not updated yet; waiting for EHD edits.
+
+* Hand-edits after pasting all sections together included: 
+    - reset margins to 1" everywhere (Some chapters compile at 1.25" -- even though all use the same style files!)
+    - Adjusted newlines before headers to compensate for repagination after margin change
+    - resized all images to 6.5" wide, unless they needed to be smaller to fit caption on page
+    - Fiddled with table column widths
+    - Probably other changes I'm forgetting
+
+
+
+
+Edits from 20161129 to 20161129_2:
+    * Moved all ref sections to come after figs and tables.
+    * Changed chapter 2 and 4 figure sections from "Tables and Figures" to "Table and Figures"
+    * Changed supplements from ch. 2 to Appendix A:
+        - Cut from ch. 2
+        - pasted after ch. 5
+        - Changed title from "Supplement 2.S1: DayCent model fit evaluation" to "Appendix A: DayCent model fit evaluation"
+        - Changed title style from Header 2 to Header 1
+        - Changed "Data availability" style from Header 3 to Header 2
+        - Added "Figures and Tables" header above Table 2.S1 (which will momentarily become Table A.1)
+        - Searched for "2.S" in whole document, replaced with "A."
+        - Replaced reference to "Supplement 2.S1" on p. 23 with "Appendix A" 
+    * Changed supplements from ch. 3 to Appendix B:
+        - Cut from Ch. 3
+        - Pasted after Appendix A
+        - Added new chapter header "Appendix B: Rhizotron model fit evaluation"
+        - Removed "Supplement" and numbers from section headers.
+        - Added "References" section header after figures
+        - Populated from Ch. 3 references: *cut* Gelman 2006 (only cited in appendix), *copied* Bragg et al, Samson and Sinclair, Ephrath.
+        - Searched for "3.S" in whole document, replaced with "B."
+        - Replaced reference to "Supplement 3.S1" on p. 58 (was p. 67) with "Appendix B".
+    * Changed supplements from Ch. 4 to Appendix C:
+        - Cut from Ch. 4
+        - Pasted after Appendix B
+        - Changed header style from Header 2 to Header 1
+        - changed title from "Supplement 4.S1: Supplemental figures" to "Appendix C: Supplemental figures for taxonomic partitioning of root placement"
+    * Ch 4 and Appendix C: Fixed a bunch of typos and added some missing figure citations, supposedly all documented in prairie_seq/plant_manuscript/todo.md.
+    * Updated chapter starting page numbers in table of contents
+    * Added appendices to table of contents
+
+Note that none of the renumberings from "supplement" to "appendix" have been propagated back to any file other than CK_Black_dissertation_20161129_v2.docx and CK_Black_dissertation_20161129_v2.pdf, and they probably never will be.
